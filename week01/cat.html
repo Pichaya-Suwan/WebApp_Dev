@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CAT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            font-family: 'Prompt', sans-serif;
+            justify-content: center;
+        }
+
+        .card {
+            display: flex;
+            width: 400px;
+            height: 500px;
+            background-color: white;
+            border-radius: 5px;
+            flex-direction: column;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin: 15px;
+        }
+
+        .card:hover {
+            background-color: rgb(43, 43, 43);
+            color: white;
+        }
+
+        .img-con {
+            width: 100%;
+            height: 280px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-crop {
+            position: absolute;
+            left: -1000%;
+            right: -1000%;
+            top: -1000%;
+            bottom: -1000%;
+            margin: auto;
+            min-height: 100%;
+            min-width: 100%;
+        }
+
+        .text-con {
+            padding: 20px;
+            padding-top: 0px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(241, 241, 241); padding: 5%;">
+    <div class="container">
+        <div class="card">
+            <div class="img-con">
+                <img class="img-crop" src="img/siamese.jpg">
+            </div>
+            <div class="text-con">
+                <h2>วิเชียรมาศ</h2>
+                <p>แมววิเชียรมาศ (Siamese) เป็นแมวไทยที่ชาวต่างชาติรู้จักกันดีในชื่อ Siamese Cat หรือ แมวสยาม ตามตำนาน
+                    หากใครได้เลี้ยงแมววิเชียรมาศ จะได้เป็นขุนนาง เพราะถือว่าแมววิเชียรมาศเป็นแมวแห่งโชคลาภ</p>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="img-con">
+                <img class="img-crop" src="img/American-Shorthair-Cat.jpg">
+            </div>
+            <div class="text-con">
+                <h2>American Shorthair</h2>
+                <p>แมวอเมริกัน ชอร์ตแฮร์  เป็นแมวสายพันธุ์อเมริกาที่สืบเชื้อสายมาจากประเทศในแถบยุโรป
+                    แพร่พันธุ์มายังอเมริกา เป็นแมวพื้นเมืองขนสั้นของอเมริกา</p>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="img-con">
+                <img class="img-crop" src="img/british-shorthair.jpg">
+            </div>
+            <div class="text-con">
+                <h2>British Shorthair</h2>
+                <p>แมวบริติช ชอร์ตแฮร์ (British Shorthair) เป็นแมวหน้าใหญ่สายพันธุ์เก่าแก่บนเกาะอังกฤษ
+                    สีที่เด่นและเป็นเอกลักษณ์ของสายพันธุ์นี้คือสีบลู หรือสีเทาเข้ม</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- row 2 -->
+    <div class="container">
+        <div class="card">
+            <div class="img-con">
+                <img class="img-crop" src="img/bengal-cat.jpg">
+            </div>
+            <div class="text-con">
+                <h2>Bengal</h2>
+                <p>แมวเบงกอล (Bengal) เป็นแมวที่มีลวดลายสวยงาม คล้ายลูกเสือดาวตัวน้อย ๆ
+                    เกิดจากการผสมพันธุ์ระหว่างแมวดาวกับแมวบ้านสายพันธุ์อียิปต์เชียนมัวร์ (Egyptian Mau)</p>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="img-con">
+                <img class="img-crop" src="img/Ragdoll-Cat.png">
+            </div>
+            <div class="text-con">
+                <h2>Ragdoll</h2>
+                <p>Ragdoll เป็นแมวพันธุ์หนึ่งที่มีขนแหลมสีและตาสีฟ้าโดดเด่น รูปร่างของมันใหญ่และล่ำสัน
+                    ขนของมันนุ่มสลวยเป็นขนกึ่งยาว Ragdolls ได้รับการพัฒนาโดย Ann Baker ผู้เพาะพันธุ์ชาวอเมริกันในปี 1960
+                </p>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="img-con">
+                <img class="img-crop" src="img/nyan.jpg">
+            </div>
+            <div class="text-con">
+                <h2>Nyan Cat</h2>
+                <p>Nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan</p>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
