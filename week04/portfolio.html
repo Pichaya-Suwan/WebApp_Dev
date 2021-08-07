@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        #navbar {
+            display: flex;
+            position: fixed;
+            top: 0;
+            height: 120px;
+            width: 100%;
+            background-color: white;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        header {
+            align-self: center;
+            margin-left: 50px;
+        }
+
+        #header-name {
+            font-size: 40px;
+
+        }
+
+        #portfolio-text {
+            font-size: 25px;
+            color: rgb(78, 78, 78);
+            margin-top: 2px;
+        }
+
+        body {
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+        }
+
+        #welcome-section {
+            display: flex;
+            height: 100vh;
+            background-color: black;
+        }
+
+        #welcome-content {
+            display: flex;
+            /* background-color: crimson; */
+            height: calc(100% - 120px);
+            width: 100%;
+            margin-top: 120px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .hello-world {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 150px;
+            height: 180px;
+            text-align: center;
+            text-justify: auto;
+            background-color: white;
+            padding: 10px;
+        }
+
+        #projects {
+            font-family: 'Rubik', sans-serif;
+        }
+
+        #projects-header {
+            text-align: center;
+            font-size: 50px;
+            padding: 10px;
+        }
+
+        .project-tile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #project_1_img {
+            width: 100%;
+            height: auto;
+            max-width: 1920px;
+        }
+
+        .nav-link {
+            font-size: 25px;
+            padding: 20px;
+            color: rgb(58, 58, 58);
+            text-decoration: none !important;
+        }
+
+        #nav-group {
+            align-self: center;
+            margin-left: auto;
+            margin-right: 40px;
+        }
+
+        footer {
+            display: flex;
+            height: 100px;
+            background-color: black;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #github-img {
+            border-radius: 50%;
+            height: 40px;
+            width: auto;
+        }
+
+        @media only screen and (max-width:650px) {
+            #navbar {
+                height: 80px;
+            }
+
+            header {
+                align-self: center;
+                margin-left: 20px;
+            }
+
+            #header-name {
+                font-size: 20px;
+            }
+
+            #portfolio-text {
+                font-size: 13px;
+                margin-top: 1px;
+            }
+
+            .nav-link {
+                font-size: 15px;
+                padding: 10px;
+            }
+
+            #nav-group {
+                margin-right: 20px;
+            }
+
+            .hello-world {
+                font-size: 50px;
+                height: 70px;
+                padding: 5px;
+            }
+
+            #projects-header {
+                font-size: 25px;
+                padding: 5px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>
+            <div id="header-name">Pichaya Suwan</div>
+            <div id="portfolio-text">Portfolio</div>
+        </header>
+        <div id="nav-group">
+            <a class="nav-link" href="#welcome-section">Home</a>
+            <a class="nav-link" href="#projects">Project</a>
+        </div>
+    </nav>
+
+    <div id="welcome-section">
+        <div id="welcome-content">
+            <h1 class="hello-world">Hello World.</h1>
+            <!-- <div class="hello-world">WORLD</div> -->
+        </div>
+    </div>
+    <div id="projects">
+        <h1 id="projects-header">PROJECT</h1>
+        <div class="project-tile">
+            <a href=""><img id="project_1_img"
+                    src="https://cdn.discordapp.com/attachments/426001720620089347/873530261822898177/memeport.png" /></a>
+        </div>
+    </div>
+
+    <footer>
+        <a id="profile-link" href="https://github.com/Pichaya-Suwan" target="_blank"><img id="github-img"
+                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" /></a>
+    </footer>
+</body>
+
+</html>
