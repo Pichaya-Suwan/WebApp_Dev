@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            width: 600px;
+            padding: 80px;
+            padding-top: 40px;
+            border-radius: 20px;
+
+        }
+        body{
+            display: flex;
+            background-color: black;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+            padding-top: 48px;
+        }
+
+        .input-con{
+            display: flex;
+            height: 40px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-color: gray;
+            border-style: solid;
+            border-width: 2px;
+            
+        }
+
+        input{
+            font-size: 20px;
+            border: 0;
+            background-color: transparent;
+            margin-left: 15px;
+            outline: none;
+        }
+
+        p{
+            font-size: 18px;
+        }
+
+        button{
+            background-color: #001E6C;
+            height: 60px;
+            color: white;
+            font-size: 20px;
+            border: 0;
+            border-radius: 15px;
+        }
+
+        #bmi, #status{
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h2>BMI Calculator</h2>
+      <p>Height</p>
+      <div class="input-con">
+        <input id="h-input" placeholder="cm"/>
+      </div>
+      <p>Weight</p>
+      <div class="input-con">
+        <input id="w-input" placeholder="kg"/>
+      </div>
+
+      <button onclick="cal()">Calculate</button>
+
+      <label id="bmi"></label>
+      <label id="status"></label>
+      
+    </div>
+    <script>
+        function cal(){
+            var h = document.getElementById('h-input').value;
+            var w = document.getElementById('w-input').value;
+            var bmi = w/(Math.pow((h/100), 2));
+            document.getElementById('bmi').innerHTML = "BMI : "+bmi.toFixed(2);
+            var status = '';
+            if(bmi<18.5){
+                status = 'Underweight';
+            }else if(bmi<=24.9){
+                status = 'Healty Weight';
+            }else if(bmi<=29.9){
+                status = 'Overweight';
+            }else if(bmi>=30){
+                status = 'Obesity';
+            }
+            document.getElementById('status').innerHTML = status;
+        }
+    </script>
+  
+  </body>
+</html>
