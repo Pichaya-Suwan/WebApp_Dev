@@ -1,0 +1,40 @@
+{
+    "product": [
+        
+        {
+            "name": "Google Pixel 5a",
+            "img": "https://s.isanook.com/hi/0/ui/307/1539797/pix2.jpg",
+            "price": "15900"
+        },
+        {
+            "name": "Apple iPhone 13 Pro",
+            "img": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-13-pro-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652957000",
+            "price": "38900"
+        },
+        {
+            "name": "Apple iPhone 13",
+            "img": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-13-starlight-select-2021?wid=940&hei=1112&fmt=png-alpha&.v=1629907845000",
+            "price": "29900"
+        },
+        {
+            "name": "Apple iPhone 13 mini",
+            "img": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-13-mini-blue-select-2021?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1629842711000",
+            "price": "23900"
+        },
+        {
+            "name": "Xiaomi Mi 11 Ultra",
+            "img": "https://cdn.siamphone.com/spec/xiaomi/images/mi_11_ultra/com_2.jpg",
+            "price": "33900"
+        },
+        {
+            "name": "Samsung Galaxy S21 Ultra",
+            "img": "https://images.samsung.com/levant/smartphones/galaxy-s21/buy/s21_ultra_group_kv_mo_img.jpg",
+            "price": "39900"
+        },
+        {
+            "name": "Samsung Galaxy Z Flod 3",
+            "img": "https://images.samsung.com/levant/smartphones/galaxy-z-fold3-5g/buy/zfold3_carousel_mainsinglekv_mo.jpg",
+            "price": "57900"
+        }
+    ]
+}
