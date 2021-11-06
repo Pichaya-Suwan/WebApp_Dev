@@ -1,0 +1,25 @@
+.productCard-name {
+  font-size: 18px;
+  color: #1d3557;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.productCard-price {
+  font-size: 18px;
+  color: #e63946;
+  font-weight: 600;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.productCard-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.productCard-img {
+  height: 212px;
+  width: 220px;
+  object-fit: cover;
+}

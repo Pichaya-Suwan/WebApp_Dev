@@ -1,0 +1,25 @@
+@import "../../colors.css";
+.sab-button {
+  background-color: "transparent";
+  border-color: var(--primary);
+  border-style: solid;
+  border-width: 2px;
+  /* padding: 12px; */
+  padding-left: 24px;
+  padding-right: 24px;
+  font-family: var(--font);
+  color: var(--primary);
+  font-size: 14px;
+  margin-right: 16px;
+  height: 45px;
+}
+
+#sabActive {
+  background-color: var(--primary);
+  color: white;
+}
+
+#sabInActive {
+  background-color: transparent;
+  color: var(--primary);
+}
