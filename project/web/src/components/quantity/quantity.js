@@ -13,11 +13,13 @@ class QuantityPicker extends React.Component {
 
   handleIncrease = () => {
     this.setState({ quantity: this.state.quantity + 1 });
+    this.props.updateQty(this.state.quantity + 1);
   };
 
   handleDecrease = () => {
     if (this.state.quantity > 1) {
       this.setState({ quantity: this.state.quantity - 1 });
+      this.props.updateQty(this.state.quantity - 1);
     }
   };
 
@@ -47,10 +49,10 @@ class QuantityPicker extends React.Component {
             borderWidth: 2,
             borderColor: colors.primary,
             borderStyle: "solid",
-            fontSize:26
+            fontSize: 26,
             // boxSizing:"content-box"
           }}
-          onClick={()=>this.handleDecrease()}
+          onClick={() => this.handleDecrease()}
         >
           -
         </button>
@@ -60,7 +62,7 @@ class QuantityPicker extends React.Component {
             // height: "45px",
             width: "40%",
             // backgroundColor: "red",
-            
+
             margin: 0,
             alignItems: "center",
             justifyContent: "center",
@@ -91,7 +93,6 @@ class QuantityPicker extends React.Component {
           onClick={() => {
             this.handleIncrease();
           }}
-          
         >
           +
         </button>

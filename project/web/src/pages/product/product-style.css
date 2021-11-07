@@ -137,12 +137,15 @@
   text-align: left;
   font-weight: 500;
   width: 140px;
+  line-height: 30px;
 }
 .product-spec-val {
   font-weight: 400;
-
+  text-align: left;
+  line-height: 30px;
   margin: 0;
   padding: 0;
+  width: 450px;
 }
 
 .product-spec-detail-con {

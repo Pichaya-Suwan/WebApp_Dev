@@ -8,8 +8,12 @@ import React from "react";
 
 import { Routes, Route } from "react-router-dom";
 
+import { Provider } from "react-redux";
+import configureStore from "./redux/store";
+
 import Home from "./pages/home/home";
 import Product from "./pages/product/product";
+import AllProduct from "./pages/all_product/allProduct";
 
 class App extends React.Component {
   constructor() {
@@ -18,22 +22,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <Header />
+      <Provider store={configureStore}>
+        <div className="App">
+          <div className="App-header">
+            <Header />
+          </div>
+          <div className="App-body">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/product" element={<AllProduct />} />
+              <Route path="/product/:id" element={<Product />} />
+            </Routes>
+          </div>
+          <div>
+            <Footer />
+          </div>
         </div>
-        <div className="App-body">
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-          <Routes>
-            <Route path="/product" element={<Product />} />
-          </Routes>
-        </div>
-        <div>
-          <Footer />
-        </div>
-      </div>
+      </Provider>
     );
   }
 }
