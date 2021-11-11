@@ -9,6 +9,9 @@ import { BiTrash } from "react-icons/bi";
 import { connect } from "react-redux";
 import { addToCart, updateCart, removeCart } from "../../redux/actions/cart";
 
+import { Link } from "react-router-dom";
+import { withRouter } from "../../withRouter";
+
 class CartModal extends React.Component {
   constructor() {
     super();
@@ -69,11 +72,10 @@ class CartModal extends React.Component {
   //   };
 
   handleRemoveItem = (id, price, qty) => {
-      console.log(id)
+    console.log(id);
     this.props.removeCart(id);
     this.setState({ total: this.state.total - price * qty });
     console.log(this.props.cartData);
-   
   };
 
   componentDidMount() {
@@ -84,11 +86,8 @@ class CartModal extends React.Component {
         total += item.price * item.qty;
       });
       this.setState({ total: total });
-      
     }
   }
-
- 
 
   renderList = () => {
     if (this.props.cartData) {
@@ -152,6 +151,24 @@ class CartModal extends React.Component {
         <label className="cm-total-label">
           Total&nbsp;&nbsp;{this.toTHB(this.state.total)} ฿
         </label>
+        <div className="cm-button-con">
+          <button
+            id="cm-back-shop"
+            className="cm-button"
+            onClick={() => this.props.closeModal()}
+          >
+            Back to Shop
+          </button>
+          <button
+            className="cm-button"
+            onClick={() => {
+              this.props.navigate("/checkout");
+              this.props.closeModal();
+            }}
+          >
+            Checkout
+          </button>
+        </div>
       </div>
     );
   }
@@ -171,4 +188,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartModal);
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(CartModal)
+);

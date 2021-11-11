@@ -14,6 +14,7 @@ import configureStore from "./redux/store";
 import Home from "./pages/home/home";
 import Product from "./pages/product/product";
 import AllProduct from "./pages/all_product/allProduct";
+import CheckOut from "./pages/checkout/checkout";
 
 class App extends React.Component {
   constructor() {
@@ -32,6 +33,7 @@ class App extends React.Component {
               <Route path="/" element={<Home />} />
               <Route path="/product" element={<AllProduct />} />
               <Route path="/product/:id" element={<Product />} />
+              <Route path="/checkout" element={<CheckOut />} />
             </Routes>
           </div>
           <div>

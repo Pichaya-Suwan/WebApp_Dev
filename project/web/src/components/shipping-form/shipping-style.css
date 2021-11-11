@@ -1,0 +1,33 @@
+@import "../../colors.css";
+
+.ship-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 100px;
+  margin-top: 40px;
+  /* background-color: aqua; */
+}
+
+.ship-row {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ship-next-but {
+    display: flex;
+    height: 68px;
+    width: 180px;
+    background-color: var(--primary);
+    color: white;
+    border: 0;
+    font-family: var(--font);
+    font-size: 18px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 40px;
+  }

@@ -72,6 +72,20 @@ class Product extends React.Component {
  
   };
 
+  handleBuy=()=>{
+    this.props.addToCart({
+      id: Date.now().toString(),
+      itemID: this.props.params.id,
+      name: this.state.name,
+      image: this.state.image,
+      color: this.state.selectedColor,
+      storage: this.state.selectedStorage,
+      price: this.state.price,
+      qty: this.state.qty,
+    });
+    this.props.navigate("/checkout")
+  }
+
   fetchProduct = () => {
     fetch("http://localhost:5000/api/product/" + this.props.params.id)
       .then((res) => res.text())
@@ -149,7 +163,7 @@ class Product extends React.Component {
                   <MdOutlineShoppingCart size={24} color={colors.primary} />
                   <label style={{ marginLeft: 20 }}>Add to Cart</label>
                 </button>
-                <button className="product-buy-but">
+                <button className="product-buy-but" onClick={this.handleBuy}>
                   <label>Buy</label>
                 </button>
               </div>
